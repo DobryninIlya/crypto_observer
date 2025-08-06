@@ -128,6 +128,7 @@ func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *App) Close() error {
+	defer a.pool.Stop()
 	err := a.Server.Close()
 	if err != nil {
 		return err

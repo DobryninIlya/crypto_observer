@@ -28,7 +28,7 @@
 
 1. Клонировать репозиторий:
 ```bash
-git clone https://github.com/yourusername/cryptoObserver.git
+git clone https://github.com/DobryninIlya/crypto_observer.git
 cd cryptoObserver
 ```
 
@@ -45,7 +45,6 @@ DB_PASSWORD=passwordfjdk
 DB_NAME=botdb
 DB_PORT=5433
 SERVER_PORT=8080
-CRYPTO_API_KEY=
 WORKER_POOL_SIZE=10
 WORKER_POOL_UPDATE_TIME=60
 CRYPTO_API_KEY=CG-kq8Ee8QmdRMM4MA32myqrqxN
