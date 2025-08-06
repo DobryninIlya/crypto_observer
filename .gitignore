@@ -1,0 +1,25 @@
+# Go
+bin/
+*.exe
+*.test
+*.out
+*.log
+coverage.*
+vendor/
+go.sum
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Миграции
+/internal/app/migrations/migrations/*.sql
+
+# Docker
+*.env
+.env.*

@@ -1,0 +1,88 @@
+info:
+  contact: {}
+  description: This is a Crypto Observer service API documentation.
+  termsOfService: http://swagger.io/terms/
+  title: Crypto Observer API
+  version: "1.0"
+paths:
+  /currency/add:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Добавление валюты в список валют для отслеживания.
+      parameters:
+      - description: Логин
+        in: formData
+        name: currencyID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK - Currency added successfully
+          schema:
+            type: string
+        "400":
+          description: Bad Request - Currency ID is required
+          schema:
+            type: string
+      summary: Добавление валюты
+      tags:
+      - currency
+  /currency/price:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Получение цены валюты по ID
+      parameters:
+      - description: ID валюты
+        in: formData
+        name: currencyID
+        required: true
+        type: string
+      - description: timestamp
+        in: formData
+        name: timestamp
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Price of the currency
+          schema:
+            type: number
+        "400":
+          description: Bad Request - Currency ID is required
+          schema:
+            type: string
+      summary: Получение цены валюты
+      tags:
+      - currency
+  /currency/remove:
+    delete:
+      consumes:
+      - multipart/form-data
+      description: Удаление валюты в список валют для отслеживания.
+      parameters:
+      - description: ID валюты
+        in: formData
+        name: currencyID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK - Currency removed successfully
+          schema:
+            type: string
+        "400":
+          description: Bad Request - Currency ID is required
+          schema:
+            type: string
+      summary: Удаление валюты
+      tags:
+      - currency
+swagger: "2.0"
