@@ -17,8 +17,6 @@ go.sum
 .DS_Store
 Thumbs.db
 
-# Миграции
-/internal/app/migrations/migrations/*.sql
 
 # Docker
 *.env
